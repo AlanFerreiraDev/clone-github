@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { RiBookmarkLine } from 'react-icons/ri';
 
 export const Container = styled.div`
   --horizontalPadding: 16px;
@@ -64,4 +65,43 @@ export const CalendarHeading = styled.span`
   font-size: 16px;
   margin: 36px 0 9px;
   display: inline-flex; // se fosse block, não poderia receber margin, por isso colocamos inline-flex
+`;
+export const RepoIcon = styled(RiBookmarkLine)`
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+`;
+
+export const Tab = styled.div`
+  background: var(--primary);
+
+  .content {
+    display: flex;
+    align-items: center;
+    width: min-content; // Para ocupar o emnor espaço possível
+
+    padding: 14px 16px;
+
+    border-bottom: 2px solid var(--orange);
+
+    .label {
+      font-size: 14px;
+      padding: 0 7px;
+      font-weight: 600;
+    }
+
+    .number {
+      font-size: 12px;
+      background: var(--ticker);
+      padding: 2px 6px;
+      border-radius: 24px;
+    }
+  }
+
+  .line {
+    display: flex;
+    width: 200vh;
+    border-bottom: 1px solid var(--border);
+    margin-left: -50vw;
+  }
 `;
