@@ -1,9 +1,17 @@
 import React from 'react';
 
-import { Container, Main, LeftSide, RightSide, Repos } from './styles';
+import {
+  Container,
+  Main,
+  LeftSide,
+  RightSide,
+  Repos,
+  CalendarHeading,
+} from './styles';
 
-import ProfileData from '../../components/ProfileData';
-import RepoCard from '../../components/RepoCard';
+import ProfileData from 'components/ProfileData';
+import RepoCard from 'components/RepoCard';
+import RandomCalendar from 'components/RandomCalendar';
 
 export const Profile = () => {
   return (
@@ -41,6 +49,12 @@ export const Profile = () => {
               ))}
             </div>
           </Repos>
+
+          <CalendarHeading>
+            Random Calendar (do not represent actual data)
+          </CalendarHeading>
+
+          <RandomCalendar />
         </RightSide>
       </Main>
     </Container>
